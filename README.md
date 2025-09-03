@@ -2,7 +2,7 @@
 
 A PyTorch-based logistic regression model to predict the winner of a League of Legends match using only the first 10 minutes of in-game data.
 
----
+***
 
 ## ✨ Key Features
 
@@ -14,7 +14,7 @@ A PyTorch-based logistic regression model to predict the winner of a League of L
 * **Feature Importance**: Analyzes and visualizes the model's learned weights to determine the most impactful in-game features.
 * **Model Persistence**: Demonstrates how to save and load the trained model using `torch.save` and `torch.load`.
 
----
+***
 
 ## 📊 Results at a Glance
 
@@ -22,7 +22,7 @@ A PyTorch-based logistic regression model to predict the winner of a League of L
 * **AUC Score**: **0.80**
 * **Optimal Learning Rate**: **0.01**
 
----
+***
 
 ## 🛠️ Tech Stack
 
@@ -32,30 +32,18 @@ A PyTorch-based logistic regression model to predict the winner of a League of L
 * Scikit-learn
 * Matplotlib
 
----
+***
 
-## 🚀 How to Run
+## 📦 Core Libraries
 
-1.  **Clone the repository:**
-    ```bash
-    git clone <repository-url>
-    ```
+The project relies on the following key libraries and modules:
 
-2.  **Navigate to the project directory:**
-    ```bash
-    cd league-of-legends-match-predictor
-    ```
-
-3.  **Install the required libraries:**
-    ```bash
-    pip install -r requirements.txt
-    ```
-
-4.  **Run the Jupyter Notebook:**
-    ```bash
-    jupyter notebook League_of_Legends_Match_Predictor_Project.ipynb
-    ```
-
----
-
-## 📋 `requirements.txt`
+```python
+import pandas as pd
+import torch
+import torch.nn as nn
+import torch.optim as optim
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import StandardScaler
+from sklearn.metrics import confusion_matrix, roc_curve, auc, classification_report, accuracy_score
+import matplotlib.pyplot as plt
